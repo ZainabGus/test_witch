@@ -73,3 +73,19 @@ form.addEventListener('submit', function(event){
 });
 
 
+document.addEventListener('DOMContentLoaded', function(){
+    let q = document.querySelectorAll('input[type="radio"]');
+    q.forEach(radio => {
+        radio.addEventListener('change', function() {
+            setTimeout(() => {
+                let s = this.closest('.question');
+                let y = s.nextElementSibling;
+                y.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 100);
+        });
+    });
+
+});
