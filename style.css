@@ -146,3 +146,41 @@ a {
     text-decoration: none;
     color: #3a2a4a;
 }
+
+.small {
+    width: 20%;
+}
+
+img {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+@media (min-width: 700px) {
+    img {
+        width: 90%;
+        padding: 15px;
+    }
+    iframe {
+        height: 400px;
+    }
+    
+
+}
+
+
+@media (min-width: 1024px) {
+    img {
+        width: 60%;
+    }
+    .small {
+        width: 10%;
+    }
+    p {
+        font-size: 20px;
+    }
+    iframe {
+        height: 700px;
+    }
+}
