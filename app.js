@@ -16,7 +16,7 @@ let personName = document.querySelector('#name');
 let good = document.querySelector('.name');
 let button_p = document.querySelector('.button_p')
 
-// УБИРАЕМ проверку сервера, используем ТОЛЬКО localStorage
+
 document.addEventListener('DOMContentLoaded', function() {
     const localName = localStorage.getItem('userName');
     
@@ -38,15 +38,12 @@ personName.addEventListener('submit', function(event){
     let f = new FormData(personName);
     let userName = f.get('name');
     
-    // Сохраняем ТОЛЬКО локально (на этом устройстве)
     localStorage.setItem('userName', userName);
     
     personName.style.display = 'none';
     good.style.display = 'block';
     good.innerText = 'Привет, ' + userName;
     button_p.style.display = 'block';
-    
-    // На сервер НЕ отправляем (или отправляем только для статистики)
 });
 
 button_p.addEventListener('click', function(event){
@@ -95,7 +92,7 @@ form.addEventListener('submit', function(event){
         newDiv.style.color = 'red';
         section.after(newDiv);
         form.reportValidity();
-        return; // Прекращаем выполнение функции
+        return; 
     }
     else {
         if (Math.max(a, b, c, d, e) == a) {
@@ -134,3 +131,4 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 
 });
+
